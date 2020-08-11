@@ -49,11 +49,7 @@
 			
 			<div class="wrapper">
 				<div class="card bg-light">
-					## &#10;						Hi, I'm Przemek Krogulski, full stack developer&#10;					
-
-					<button class="button--scroll-down">
-						
-					</button>
+					## &#10;						Hi, I'm Przemek Krogulski, full stack developer&#10;	
 				</div>
 			</div>
 
