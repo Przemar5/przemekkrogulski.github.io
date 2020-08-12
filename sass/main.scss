@@ -465,7 +465,8 @@ textarea {
 	color: inherit;
 	text-decoration: none;
 	box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 20%);
-	max-width: 30rem;
+	max: 60rem;
+	max: 48rem;
 
 	&:focus &__caption,
 	&:hover &__caption {
@@ -495,6 +496,13 @@ textarea {
 			top: 1.5rem;
 			bottom: 1.5rem;
 		}
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.project {
+		max-width: 30rem;
+		max-height: 24rem;
 	}
 }
 

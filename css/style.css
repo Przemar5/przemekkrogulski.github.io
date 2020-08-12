@@ -616,7 +616,8 @@ textarea:focus {
   color: inherit;
   text-decoration: none;
   box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 0.2);
-  max-width: 30rem;
+  max: 60rem;
+  max: 48rem;
 }
 .project:focus .project__caption, .project:hover .project__caption {
   opacity: 0.9;
@@ -640,6 +641,12 @@ textarea:focus {
   margin-bottom: 1.5rem;
 }
 
+@media screen and (max-width: 540px) {
+  .project {
+    max-width: 30rem;
+    max-height: 24rem;
+  }
+}
 #contact {
   background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
 }
