@@ -631,7 +631,10 @@ textarea:focus {
   box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 0.35);
 }
 .project__caption {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem 3.5rem;
   position: absolute;
   top: 0;

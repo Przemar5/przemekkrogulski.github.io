@@ -483,7 +483,10 @@ textarea {
 	}
 
 	&__caption {
-		display: block;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		padding: 2rem 3.5rem;
 		position: absolute;
 		top: 0;
