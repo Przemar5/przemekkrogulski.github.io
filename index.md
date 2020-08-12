@@ -217,3 +217,46 @@
 		
 		
 	
+\[Przemysław Krogulski\](#home)   \* \[Home\](#home) \* \[About me\](#about) \* \[Projects\](#projects) \* \[Contact\](#contact)
+
+\## Hi, I'm Przemek Krogulski, full stack developer
+
+\## About me
+
+\### Who am I? Programming is my passion. I am selfthaught programmer from 2 years. From 1 and half year also selfthaught full stack developer. I am interested in programming, web security, self-development, economics, politics and design.
+
+\### What I do? I program websites in PHP and Javascript. I use mostly plain PHP but I also have little experience with Laravel.
+
+\### Technology stack
+
+PHP
+
+MySQL
+
+PostgreSQL
+
+jQuery
+
+Javascript
+
+HTML
+
+CSS
+
+Laravel
+
+\## Projects
+
+\[!\[\](images/project\_1.png)
+
+\### Fresh News News site made with Laravel 7
+
+\](http://yourfreshnews.herokuapp.com)
+
+\## Contact
+
+Send
+
+\[\](https://github.com/Przemar5)\[\](https://www.linkedin.com/in/przemys%C5%82aw-krogulski-1081ba1b2/)\[\](https://www.facebook.com/przemo.dzida)
+
+Przemysław Krogulski © 2020
