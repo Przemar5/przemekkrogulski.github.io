@@ -468,7 +468,7 @@ textarea {
 	color: inherit;
 	text-decoration: none;
 	box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 20%);
-	max-width: 80rem;
+	max-width: 56rem;
 
 	&__image {
 		display: flex;
@@ -500,6 +500,7 @@ textarea {
 	}
 
 	&__header {
+		font-size: 3rem;
 		font-weight: 300;
 		margin: {
 			top: 1.5rem;
@@ -508,6 +509,7 @@ textarea {
 	}
 
 	&__paragraph {
+		font-size: 1.5rem;
 		margin: {
 			top: 1.5rem;
 			bottom: 1.5rem;
