@@ -156,28 +156,6 @@
 							</p>
 						</div>
 					](http://yourfreshnews.herokuapp.com)
-
-					[
-						<div class="project__caption">
-							<h3 class="project__header">
-								Project 2
-							</h3>
-							<p class="project__paragraph">
-								Fusce ac volutpat ipsum. Vestibulum efficitur, odio interdum efficitur sollicitudin, nisl neque convallis ipsum, et aliquet nunc ante sed lacus.
-							</p>
-						</div>
-					](http://localhost/projects/portfolio/#)
-
-					[
-						<div class="project__caption">
-							<h3 class="project__header">
-								Project 3
-							</h3>
-							<p class="project__paragraph">
-								Fusce ac volutpat ipsum. Vestibulum efficitur, odio interdum efficitur sollicitudin, nisl neque convallis ipsum, et aliquet nunc ante sed lacus.
-							</p>
-						</div>
-					]()
 				</div>
 			</div>
 		</section>
