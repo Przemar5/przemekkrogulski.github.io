@@ -450,6 +450,7 @@ textarea {
 	.projects {
 		&__container {
 			flex-direction: row !important;
+			width: auto;
 		}
 	}
 }
@@ -465,8 +466,8 @@ textarea {
 	color: inherit;
 	text-decoration: none;
 	box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 20%);
-	max: 60rem;
-	max: 48rem;
+	max-width: 60rem;
+	max-height: 48rem;
 
 	&:focus &__caption,
 	&:hover &__caption {
