@@ -1,23 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html lang="pl">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>Krogulski Przemysław - Full Stack Developer</title>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+		<!-- Font awesome -->
 		<script src="https://kit.fontawesome.com/f6b4a65528.js" crossorigin="anonymous"></script>
 
+		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+		<!-- Links -->
+		<link href="favicon.ico" rel="apple-touch-icon">
+		<link href="favicon.ico" rel="icon">
+
 		<!-- Custom styles -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/main.js" defer></script>
 	</head>
 	<body>
 		<!-- Navigation -->
-		<nav class="navbar bg-dark text-light" role="navigation">
+		<nav class="navbar bg-primary text-light">
 			<div class="navbar__wrapper">
 				<a class="navbar__brand" href="#home">
 					Przemysław Krogulski
@@ -26,11 +33,9 @@
 				<input type="checkbox" id="toggler"/>
 				<label for="toggler" class="navbar__toggler">
 					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
 				</label>
 
-				<ul class="navbar__list">
+				<ul class="navbar__list" type="none">
 					<li class="navbar__item">
 						<a class="navbar__link" href="#home">
 							Home
@@ -59,215 +64,288 @@
 		</nav>
 
 		<!-- Header -->
-		<header class="header section" id="home" role="banner">
-			<!-- If noscript, insert static image -->
-			<!-- <noscript> -->
-				<div class="hero"></div>
-			<!-- </noscript> -->
-			<div class="wrapper">
-				<div class="card bg-light">
-					<h2 class="section__header">
-						Hi, I'm Przemek Krogulski, full stack developer
-					</h2>
-				</div>
-			</div>
-
-			<!-- <canvas class="canvas"></canvas> -->
+		<header id="home">
+			<canvas id="canvas"></canvas>
 		</header>
 
-		<!-- About section -->
-		<section class="section" id="about">
-			<div class="wrapper about__wrapper">
-				<h2 class="section__header">
-					About me
-				</h2>
+		<main>
+			<!-- About section -->
+			<section class="section" id="about">
+				<div class="wrapper">
+					<h2 class="section__header">
+						About me
+					</h2>
 
-				<div class="about__container">
-					<!-- <div class="about__photo-container">
-						<div class="about__photo">
+					<div class="about__content">
+						<div class="about__left">
+							<img src="images/me.jpg" class="about__photo"/>
+
+							<article class="about__article">
+								<h3 class="about__article-header">
+									Who am I?
+								</h3>
+
+								<p class="about__article-paragraph">
+									Programming is my passion. I am selfthaught programmer from 2 years. From 1 and half year also selfthaught full stack developer. I am interested in programming, web security, self-development, economics, politics and design.
+								</p>
+							</article>
+						</div>
+
+						<div class="about__right">
+
+							<article class="about__article">
+								<h3 class="about__article-header">
+									What I do?
+								</h3>
+
+								<p class="about__article-paragraph">
+									I program websites in PHP and Javascript. I have some experience with Laravel and little experience Symfony.
+								</p>
+							</article>
 							
-						</div>
-					</div> -->
+							<article class="about__article">
+								<h3 class="about__article-header">
+									Technology stack
+								</h3>
 
-					<div class="about__card card">
-						<div class="card__part">
-							<h3 class="card__header">
-								Who am I?
-							</h3>
+								<div class="about__skills">
+									<div class="about__skill">
+										<p class="about__skill-name">PHP</p>
+										<meter min="0" max="100" value="90" class="about__skill-meter"></meter>
+									</div>
 
-							<p class="card__paragraph">
-								Programming is my passion. I am selfthaught programmer from 2 years. From 1 and half year also selfthaught full stack developer. I am interested in programming, web security, self-development, economics, politics and design.
-							</p>
-						</div>
+									<div class="about__skill">
+										<p class="about__skill-name">MySQL</p>
+										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
+									</div>
 
-						<div class="card__part">
-							<h3 class="card__header">
-								What I do?
-							</h3>
+									<div class="about__skill">
+										<p class="about__skill-name">PostgreSQL</p>
+										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
+									</div>
 
-							<p class="card__paragraph">
-								I program websites in PHP and Javascript. I use mostly plain PHP but I also have little experience with Laravel.
-							</p>
-						</div>
-						
-						<div class="card__part">
-							<h3 class="card__header">
-								Technology stack
-							</h3>
+									<div class="about__skill">
+										<p class="about__skill-name">jQuery</p>
+										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
+									</div>
 
-							<div class="about__skills">
-								<div class="about__skill">
-									<span class="about__skill-name">
-										PHP
-									</span>
-									<span class="stars--90p"></span>
+									<div class="about__skill">
+										<p class="about__skill-name">Javascript</p>
+										<meter min="0" max="100" value="65" class="about__skill-meter"></meter>
+									</div>
+
+									<div class="about__skill">
+										<p class="about__skill-name">HTML</p>
+										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
+									</div>
+
+									<div class="about__skill">
+										<p class="about__skill-name">CSS</p>
+										<meter min="0" max="100" value="80" class="about__skill-meter"></meter>
+									</div>
+
+									<div class="about__skill">
+										<p class="about__skill-name">Laravel</p>
+										<meter min="0" max="100" value="65" class="about__skill-meter"></meter>
+									</div>
+
+									<div class="about__skill">
+										<p class="about__skill-name">Symfony</p>
+										<meter min="0" max="100" value="55" class="about__skill-meter"></meter>
+									</div>
 								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										MySQL
-									</span>
-									<span class="stars--70p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										PostgreSQL
-									</span>
-									<span class="stars--70p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										jQuery
-									</span>
-									<span class="stars--70p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										Javascript
-									</span>
-									<span class="stars--60p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										HTML
-									</span>
-									<span class="stars--60p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										CSS
-									</span>
-									<span class="stars--80p"></span>
-								</div>
-
-								<div class="about__skill">
-									<span class="about__skill-name">
-										Laravel
-									</span>
-									<span class="stars--60p"></span>
-								</div>
-							</div>
+							</article>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Projects -->
-		<section class="section" id="projects">
-			<div class="wrapper">
-				<h2 class="section__header">
-					Projects
-				</h2>
+			<!-- Projects -->
+			<section class="section" id="projects">
+				<div class="wrapper">
+					<h2 class="section__header">
+						Projects
+					</h2>
 
-				<div class="projects__container">
-					<a class="project" href="http://yourfreshnews.herokuapp.com">
-						<img src="images/project_1.png" class="project__image"/>
-						<div class="project__caption">
-							<h3 class="project__header">
-								Fresh News
-							</h3>
-							<p class="project__paragraph">
-								News site made with Laravel 7
-							</p>
-						</div>
-					</a>
+					<div class="projects__container">
+						<figure class="project">
+							<a class="project__link" target="_blank" href="http://yourfreshnews.herokuapp.com">
+								<img class="project__image project__image--freshnews" src="images/project_1.png"/>
+								<figcaption class="project__caption">
+									<h3 class="project__header">Fresh News</h3>
+									<p class="project__paragraph">News site made with Laravel 7</p>
+								</figcaption>
+							</a>
+						</figure>
+
+						<figure class="project">
+							<a class="project__link" target="_blank" href="https://programming-forum.herokuapp.com">
+								<img class="project__image project__image--programming-forum" src="images/programming-forum.png"/>
+								<figcaption class="project__caption">
+									<h3 class="project__header">Programming forum</h3>
+									<p class="project__paragraph">Forum made with Symfony 5</p>
+								</figcaption>
+							</a>
+						</figure>
+					</div>
+
+ <!-- 
+	 				<div style="
+	 					display: flex;
+	 					flex-direction: row;
+	 					justify-content: center;
+	 				">
+						<figure class="projec" style="
+							position: relative;
+							width: 400px;
+							height: 240px;
+							filter: drop-shadow(3px 3px .5rem rgba(0, 0, 0, .4));
+							margin: 3.5rem 2.5rem;
+						">
+							<img src="images/project_1.png" style="
+								overflow: hidden;
+								backface-visibility: hidden;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								transform: perspective(600px) rotateY(0deg);
+								transition: transform 300ms linear;
+								cursor: pointer;
+							"/>
+							<a  target="_blank" href="http://yourfreshnews.herokuapp.com" style="
+								overflow: hidden;
+								backface-visibility: hidden;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								transform: perspective(600px) rotateY(180deg);
+								transition: transform 300ms linear;
+							">
+								<figcaption class="project__caption">
+									<h3 style="
+										font-size: 2.5rem;
+										margin-bottom: 1rem;
+									">
+										Programming forum
+									</h3>
+									<p style="
+										margin-bottom: 2rem;
+									">Forum made with Symfony 5</p>
+									<button href="https://programming-forum.herokuapp.com" class="btn btn-primary" style="
+										text-decoration: none;
+										box-shadow: 3px 3px .5rem rgba(0, 0, 0, .4);
+									">Visit</button>
+								</figcaption>
+							</a>
+						</figure>
+
+						<figure class="projec" style="
+							position: relative;
+							width: 400px;
+							height: 240px;
+							filter: drop-shadow(3px 3px .5rem rgba(0, 0, 0, .4));
+							margin: 3.5rem 2.5rem;
+						">
+							<img src="images/programming-forum.png" style="
+								overflow: hidden;
+								backface-visibility: hidden;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								transform: perspective(600px) rotateY(0deg);
+								transition: transform 250ms linear;
+								cursor: pointer;
+							"/>
+							<a  target="_blank" href="https://programming-forum.herokuapp.com" style="
+								overflow: hidden;
+								backface-visibility: hidden;
+								position: absolute;
+								width: 100%;
+								height: 100%;
+								transform: perspective(600px) rotateY(180deg);
+								transition: transform 250ms linear;
+							">
+								<figcaption class="project__caption">
+									<h3 style="
+										font-size: 2.5rem;
+										margin-bottom: 1rem;
+									">
+										Programming forum
+									</h3>
+									<p style="
+										margin-bottom: 2rem;
+									">Forum made with Symfony 5</p>
+									<button href="https://programming-forum.herokuapp.com" class="btn btn-primary" style="
+										text-decoration: none;
+										box-shadow: 3px 3px .5rem rgba(0, 0, 0, .4);
+									">Visit</button>
+								</figcaption>
+							</a>
+						</figure>
+ -->
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Contact -->
-		<section class="section" id="contact">
-			<div class="wrapper">
-				<h2 class="section__header">
-					Contact
-				</h2>
+			<!-- Contact -->
+			<section class="section" id="contact">
+				<div class="wrapper">
+					<h2 class="section__header">
+						Contact
+					</h2>
 
-				<div class="contact__card card">
 					<form class="contact__form" method="post">
-						<div class="contact__form-control">
-							<input type="text" class="contact__input" name="name" placeholder="Name"/>
-							<!-- <label class="contact__input-label">
-								Name
-							</label> -->
-						</div>
+						<label class="contact__form-control contact__form-control--name">
+							<input type="text" class="contact__input" name="name" placeholder/>
+							<span class="contact__input-placeholder">Name</span>
+						</label>
 
-						<div class="contact__form-control">
-							<input type="email" class="contact__input" name="email" placeholder="E-mail"/>
-							<!-- <label class="contact__input-label">
-								E-mail
-							</label> -->
-						</div>
+						<label class="contact__form-control contact__form-control--email">
+							<input type="email" class="contact__input" name="email" placeholder/>
+							<span class="contact__input-placeholder">Email</span>
+						</label>
 
-						<div class="contact__form-control">
-							<textarea class="contact__textarea" name="message" rows="5" placeholder="Message"></textarea>
-							<!-- <label class="contact__input-label">
-								Name
-							</label> -->
-						</div>
+						<label class="contact__form-control contact__form-control--message">
+							<textarea class="contact__textarea" name="message" rows="5" placeholder></textarea>
+							<span class="contact__input-placeholder">Message</span>
+						</label>
 
-						<button class="contact__form-submit">
-							Send
-							<i class="fas fa-paper-plane"></i>
+						<button class="btn btn-primary contact__form-submit">
+							Send <span class="fas fa-paper-plane"></span>
 						</button>
 					</form>
+
+					<!-- <div class="contact__card card">
+						<div class="contact__method">
+							<h4 class="contact__method-header">
+								E-mail
+							</h4>
+							<p class="card__method-paragraph">
+								primero.el.dev@gmail.com
+							</p>
+						</div>
+
+						<div class="contact__method">
+							<h4 class="contact__method-header">
+								Telephone
+							</h4>
+							<p class="card__method-paragraph">
+								536-343-411
+							</p>
+						</div>
+
+						<div class="contact__method">
+							<h4 class="contact__method-header">
+								Telephone
+							</h4>
+							<p class="card__method-paragraph">
+								123-456-789
+							</p>
+						</div>
+					</div> -->
 				</div>
-
-				<!-- <div class="contact__card card">
-					<div class="contact__method">
-						<h4 class="contact__method-header">
-							E-mail
-						</h4>
-						<p class="card__method-paragraph">
-							primero.el.dev@gmail.com
-						</p>
-					</div>
-
-					<div class="contact__method">
-						<h4 class="contact__method-header">
-							Telephone
-						</h4>
-						<p class="card__method-paragraph">
-							536-343-411
-						</p>
-					</div>
-
-					<div class="contact__method">
-						<h4 class="contact__method-header">
-							Telephone
-						</h4>
-						<p class="card__method-paragraph">
-							123-456-789
-						</p>
-					</div>
-				</div> -->
-			</div>
-		</section>
+			</section>
+		</main>
 
 		<!-- Footer -->
 		<footer class="footer">

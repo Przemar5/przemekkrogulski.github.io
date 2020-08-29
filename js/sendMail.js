@@ -1,4 +1,4 @@
-$(document).ready(function () {
+// $(document).ready(function () {
 
-	$('.contact__form').on('submit', function ())
-})
+// 	$('.contact__form').on('submit', function ())
+// })

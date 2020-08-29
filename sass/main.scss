@@ -2,11 +2,33 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap');
+
 // Variables
 
 $navbar-height: 5rem;
 $font-size: 1.6rem;
-$color-grey: #e6e6e6;
+
+
+$box-shadow-md: 3px 3px 8px 0 rgba(0, 0, 0, .4);
+$box-shadow-lg: 3px 3px 11px 0 rgba(0, 0, 0, .4);
+
+// Colors
+
+$color-gold: #f0d600;
+
+$color-lighter: #fafafa;
+$color-light: #f6f6f6;
+$color-grey: #777;
+
+$color-primary: #1000c8;
+$color-primary-dark: #080062;
+$color-primary-light: #6fe3d7;
+
+$color-secondary: #00e38e;
+$color-secondary-dark: #457900;
+
+$color-ternary: #23e7b9;
 
 // Base
 
@@ -28,7 +50,7 @@ html {
 }
 
 body {
-	font-family: Roboto, 'Open Sans', sans-serif;
+	font-family: 'Russo One', 'Open Sans', sans-serif;
 	font-size: 1.6rem;
 	font-weight: 200;
 }
@@ -56,9 +78,15 @@ textarea {
 }
 
 .bg-grey {
-	background-color: #484848;
-	background-color: #c5c5c5;
 	background-color: $color-grey;
+}
+
+.bg-primary {
+	background-color: $color-primary;
+}
+
+.bg-primary-dark {
+	background-color: $color-primary-dark;
 }
 
 .text-dark {
@@ -73,6 +101,10 @@ textarea {
 	color: $color-grey;
 }
 
+.text-primary-dark {
+	color: $color-primary-dark;
+}
+
 .text-gold {
 	color: #ffed00;
 }
@@ -81,10 +113,39 @@ textarea {
 	background: linear-gradient(90deg, #ffed00 0, #ffed00 50%, $color-grey 50%, $color-grey 100%);
 }
 
+.btn {
+	border-radius: 10rem;
+	padding: 1.5rem 2.75rem;
+	color: $color-lighter;
+	border: none;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: inherit;
+	font-wieght: 700;
+	cursor: pointer;
+	box-shadow: $box-shadow-md;
+
+	&:focus,
+	&:hover {
+		box-shadow: $box-shadow-lg;
+	}
+}
+
+.btn-primary {
+	background-color: $color-primary;
+
+	&:focus,
+	&:hover {
+		background-color: darken($color-primary, 10%);
+	}
+}
+
 .wrapper {
 	width: 110rem;
 	max-width: 110rem;
 	display: flex;
+	flex-direction: column;
+	align-conent: center;
 }
 
 .section {
@@ -96,10 +157,11 @@ textarea {
 
 	&__header {
 		display: flex;
+		justify-content: center;
 		font-size: 4.5rem;
 		font-weight: 100;
 		margin: {
-			bottom: 2.5rem;
+			bottom: 1rem;
 		}
 	}
 }
@@ -143,8 +205,8 @@ textarea {
 	right: 0;
 	font-weight: 400;
 	padding: 0;
-	z-index: 100;
-	box-shadow: 0 3px 10px 0 rgba(40, 40, 40, 20%);
+	z-index: 1000;
+	box-shadow: $box-shadow-lg;
 
 	&__wrapper {
 		display: flex;
@@ -181,8 +243,8 @@ textarea {
 		&:focus,
 		&:hover,
 		&.active {
-			background-color: #f6f6f6;
-			color: #151515;
+			background-color: $color-lighter;
+			color: $color-primary-dark;
 		}
 	}
 
@@ -194,30 +256,69 @@ textarea {
 		}
 
 		&:checked ~ label {
-			background-color: #f6f6f6;
+			background-color: $color-lighter;
 			color: #151515;
+		}
+
+		&:checked ~ .navbar__toggler > .line {
+			transform-origin: center;
+			transform: rotate(45deg) translate(0, 0);
+		}
+		
+		&:checked ~ .navbar__toggler > .line::before {
+			opacity: 0;
+		}
+		
+		&:checked ~ .navbar__toggler > .line::after {
+			transform-origin: bottom left;
+			transform: rotate(-45deg) translate(3px, 2px);
 		}
 	}
 
 	&__toggler {
 		display: none;
 		flex-direction: column;
-		justify-content: space-between;
-		//height: 2.4rem;
+		justify-content: center;
+		align-content: center;
 		cursor: pointer;
-		padding: 1rem 1.5rem;
+		padding: {
+			left: 1.5rem;
+			right: 1.5rem;
+		}
 
 		&:focus,
 		&:hover {
-			background-color: #f6f6f6;
+			background-color: $color-lighter;
 			color: #151515;
 		}
 
-		.line {
+		.line,
+		.line::before,
+		.line::after, {
 			display: block;
 			width: 3rem;
 			height: 2px;
 			background-color: currentColor;
+			transform: translate(0, 0) rotate(0);
+			transition: transorm 300ms ease;
+		}
+
+		.line {
+			position: relative;
+		}
+
+		.line::before,
+		.line::after {
+			content: '';
+			position: absolute;
+		}
+
+		.line::before {
+			top: -1rem;
+		}
+
+		.line::after {
+			top: 1rem;
 		}
 	}
 }
@@ -238,38 +339,14 @@ textarea {
 			top: 100%;
 			left: 0;
 			right: 0;
-			background-color: black;
-			box-shadow: 0 3px 10px 0 rgba(40, 40, 40, 20%);
+			background-color: $color-primary;
+			box-shadow: $box-shadow-lg;
 		}
 
 		&__toggler {
 			display: flex;
 		}
 	}
-}
-
-// Stars rating
-
-@mixin stars-rating($value) {
-	$value: $value * 10;
-	.stars--#{ $value }p {
-		$percent: $value * 1%;
-		display: inline-block;
-		font-size: 2rem;
-		line-height: 1;
-
-		&::before {
-			content: '★★★★★';
-			background: linear-gradient(90deg, #fc0 $percent, $color-grey $percent);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
-		}
-	}
-}
-
-@for $i from 0 through 10 {
-	@include stars-rating($i);
 }
 
 // Header
@@ -284,57 +361,17 @@ textarea {
 }
 
 #home {
-	width: 100%;
-	height: 100vh;
-	background-color: #656565;
-	background-image: url('../images/hero_1.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
 
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.hero {
-
-	}
-
-	.canvas {
-		height: 100vh;
+	#canvas {
 		width: 100%;
-	}
-
-	.card {
-		//background-color: transparent;
-		position: relative;
-	}
-
-	.button--scroll-down {
-		position: absolute;
-		bottom: -5.5rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.section__header {
-		margin-bottom: 0;
-	}
-}
-
-.home {
-	&__container {
-		background-color: #fafafa;
+		height: 100%;
 	}
 }
 
 // About me
 
 #about {
-	background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
+	clip-path: polygon(0 0, 100% 0, 100% 92%, 0 108%);
 
 	.wrapper {
 		//flex-direction: row-reverse;
@@ -351,80 +388,171 @@ textarea {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		max-width: 1100px;
 	}
 
 	&__container {
 		display: flex;
 	}
-/*
-	&__photo-container {
-		background-color: black;
-		background-color: $color-grey;
-		padding: 3rem 3rem;
-		height: 38rem;
+
+	&__content {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
 	}
-*/
+
+	&__left,
+	&__right {
+		flex-basis: 50%;
+		padding: 1rem 1.5rem;
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+		display: block;
+	}
+
+	&__article {
+		padding: .5rem .75rem;
+		margin: 1.5rem 0;
+
+		&-header {
+
+		}
+
+		&-paragraph {
+
+		}
+	}
+
 	&__photo {
-		width: 22rem;
-		height: 32rem;
-		background-image: url('../images/me.jpg');
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: cover;
-		border-width: 3rem;
-		border-style: solid;
-		border-bottom-color: $color-grey;
+		max-width: 100%;
+		height: auto;
+		max-height: 32rem;
+		border-radius: 50%;
+		margin: auto;
 	}
 
 	&__skills {
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-around;
 	}
 
 	&__skill {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: .5rem 0;
+		align-content: center;
+		margin: .75rem 0;
 
 		&-name {
-			width: 12rem;
-		}
-
-		&-stars {
 			display: inline-block;
-			font-size: 2rem;
-			line-height: 1;
-
-			&::before {
-				content: '★★★★★';
-
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background: linear-gradient(90deg, #fc0 70%, $color-grey 70%);
-			}
-
-			@for $i from 0 through 10 {
-				@include stars-rating($i * 10);
-			}
+			margin-right: auto;
 		}
 
-		&--meter {
-			
+		&-meter {
+			width: 70%;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			height: 2.5rem;
+			background: #eee;
+			box-shadow: 0 2px 3px rgba(0,0,0,0.2) inset;
+			border-radius: 20px;
+			margin-left: 2rem;
+			position: relative;
+
+			&::-webkit-meter-bar {
+				background: #eee;
+				box-shadow: 0px 0px 3px rgba(0,0,0,0.9) inset;
+				border-radius: 20rem;
+			}
+
+			&::-webkit-meter-optimum-value {
+				border-radius: 20rem;
+			}
+
+			&::-webkit-meter-optimum-value {
+				background: #f0d600;
+				box-shadow: -1px -2px 3px rgba(0,0,0,0.2) inset;
+			}
+
+			/* Firefox */
+			&::-moz-meter-bar {
+				border-radius: 20rem;
+			}
+
+			&:-moz-meter-optimum::-moz-meter-bar {
+				background: #f0d600;
+				box-shadow: -1px -2px 3px rgba(0,0,0,0.2) inset;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.about {
+		&__skill {
+			position: relative;
+
+			&-name {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 10;
+			}
+
+			&-meter {
+				position: absolulte;
+				width: 100%;
+				display: block;
+				margin: 0;
+				height: 2.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.about {
+		&__left,
+		&__right {
+			padding: 0;
+			margin: 0;
 		}
 
+		&__right {
+			margin-bottom: .75rem;
+		}
 
+		&__content {
+			flex-direction: column;
+		}
+
+		&__article {
+			padding: {
+				left: 0;
+				right: 0;
+			}
+			margin-bottom: 0;
+		}
 	}
 }
 
 // Projects
 
 #projects {
-	background-color: #f2f2f2;
-	//background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
-	//background-color: #262626;
-	background-color: #fafafa;
+	background-color: $color-secondary;
+	background: linear-gradient(10deg, $color-primary-light, $color-secondary);
+	transform: skewY(-6deg);
+
+	& > * {
+		transform: skewY(6deg);
+	}
 
 	& > .section__header {
 		display: flex;
@@ -439,7 +567,7 @@ textarea {
 
 	.projects__container {
 		display: flex;
-		justify-content: space-around;
+		justify-content: center;
 		flex-wrap: wrap;
 		flex-direction: row;
 		min-height: 50%;
@@ -458,28 +586,21 @@ textarea {
 }
 
 .project {
-	background-color: #fff;
-	margin: 2.5rem 2.5rem;
-	cursor: pointer;
-	position: relative;
+	margin: 2rem 2.5rem !important;
 	display: flex;
 	overflow: hidden;
-	background-color: #dedede;
-	color: inherit;
-	text-decoration: none;
 	box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 20%);
-	max-width: 56rem;
+	max-width: 40rem;
 
-	&__image {
-		display: flex;
-		max-width: 100% !important;
-		height: auto !important;
+	&__link {
+		position: relative;
+		color: inherit;
 	}
 
-	&:focus &__caption,
-	&:hover &__caption {
-		opacity: .9;
-		box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 35%);
+	&__image {
+		position: relative;
+		max-width: 100%;
+		height: auto;
 	}
 
 	&__caption {
@@ -487,47 +608,49 @@ textarea {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		padding: 2rem 3.5rem;
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: #fff;
-		transition: opacity 300ms ease;
-		opacity: 0;
+		height: 100%;
 		width: 100%;
+		opacity: 0;
+		background-color: rgba(255, 255, 255, 0.7);
+		transition: opacity 300ms ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
 	}
 
 	&__header {
 		font-size: 3rem;
 		font-weight: 300;
 		margin: {
-			top: 1.5rem;
-			bottom: 1.5rem;
+			top: 1rem;
+			bottom: 1rem;
 		}
 	}
 
 	&__paragraph {
-		font-size: 1.5rem;
+		font-size: 1.75rem;
 		margin: {
-			top: 1.5rem;
-			bottom: 1.5rem;
+			top: 1rem;
+			bottom: 1rem;
 		}
 	}
 }
 
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 560px) {
 	.project {
-		margin: 0;
+		margin: {
+			left: 0 !important;
+			right: 0 !important;
+		}
 	}
 }
 
 // Contact
 
 #contact {
-	//background-color: #f5f5f5;
-	background-image: url("https://www.transparenttextures.com/patterns/handmade-paper.png");
 
 	& > .section__header {
 		display: flex;
@@ -538,51 +661,76 @@ textarea {
 		flex-direction: column;
 		align-items: center;
 	}
-
-	.contact__method {
-		display: block;
-		margin: {
-			top: .75rem;
-			bottom: .75rem;
-		}
-
-		&-header {
-			padding-bottom: 0rem;
-			font-weight: 300;
-		}
-	}
 }
 
 .contact {
-	&__card {
-		//width: 50rem;
-		background-color: #fafafa;
-	}
-
 	&__form {
-
+		width: 100%;
+		max-width: 50rem;
 	}
 
 	&__form-control {
 		display: block;
-		margin: 1.25rem 0;
+		padding: 1.75rem 0 1rem;
+		margin-bottom: 1.5rem;
 		position: relative;
+
+		input + span,
+		textarea + span {
+			position: absolute;
+			top: 0rem;
+			left: 0;
+			z-index: 100;
+			transform: translate(1.24rem, 125%) scale(1);
+			transform-origin: 0;
+			color: $color-grey;
+			cursor: auto;
+			transition: transform 250ms ease-out;
+		}
+
+		input:focus-within,
+		textarea:focus-within {
+			outline: none;
+		}
+
+		input:focus-within + span,
+		input:not(:placeholder-shown) + span,
+		textarea:focus-within + span,
+		textarea:not(:placeholder-shown) + span {
+			transform: translate(1.24rem, 0) scale(.85);
+		}
 	}
 
 	&__input,
 	&__textarea {
 		display: block;
 		width: 100%;
-		font-family: Roboto;
+		font-family: inherit;
 		font-size: inherit;
-		padding: .5rem .75rem;
-		border-width: 1px;
+		padding: .75rem 1.25rem;
+		border: {
+			top: none;
+			left: none;
+			right: none;
+			bottom: 3px solid black;
+		}
 		position: relative;
 		font-weight: 300;
 		outline: black solid 0px;
+		position: relative;
 
 		&::placeholder {
 			font-weight: 300;
+		}
+
+		&:invalid {
+			box-shadow: none;
+			border-bottom: 3px solid #ec1111 !important;
+		}
+
+		&:focus,
+		&:hover {
+			border-bottom: 3px solid $color-ternary;
 		}
 
 		&:focus ~ label,
@@ -609,28 +757,8 @@ textarea {
 	}
 
 	&__form-submit {
-		display: block;
-		background-color: black;
-		color: #fafafa;
+		margin-top: 1rem;
 		width: 100%;
-		border: none;
-		border-radius: 0;
-		font-family: inherit;
-		font-size: 2rem;
-		padding: 1rem .5rem;
-		cursor: pointer;
-		letter-spacing: 1px;
-		margin: {
-			top: 2rem;
-			bottom: 1rem;
-		}
-		box-shadow: 3px 3px 10px 0 rgba(40, 40, 40, 20%);
-
-		&:focus,
-		&:hover {
-			background-color: #262626;
-			box-shadow: 3px 3px 14px 0 rgba(40, 40, 40, 35%);
-		}
 	}
 }
 
@@ -644,7 +772,8 @@ textarea {
 	padding: 6.5rem 2rem;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0px 3px 10px 0 rgba(40, 40, 40, 20%);
+	background-color: $color-secondary;
+	background: linear-gradient(10deg, $color-primary-light, $color-secondary);
 
 	.wrapper {
 		flex-direction: column;
@@ -671,11 +800,12 @@ textarea {
 		cursor: pointer;
 		border-radius: 50%;
 		text-decoration: none;
-		box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 50%);
+		box-shadow: $box-shadow-md;
+		color: #fff;
 
 		&:focus,
 		&:hover {
-			box-shadow: 3px 3px 14px 0 rgba(0, 0, 0, 65%);
+			box-shadow: $box-shadow-lg;
 		}
 
 		&--github {
