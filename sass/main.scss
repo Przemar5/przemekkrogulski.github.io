@@ -134,11 +134,11 @@ textarea {
 .btn {
 	border-radius: 10rem;
 	padding: 1.5rem 2.75rem;
-	color: $color-lighter;
 	border: none;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 	font-family: inherit;
+	font-size: 1.8rem;
 	font-wieght: 700;
 	cursor: pointer;
 	box-shadow: $box-shadow-md;
@@ -151,10 +151,12 @@ textarea {
 
 .btn-primary {
 	background-color: $color-primary;
+	color: $color-lighter;
 
 	&:focus,
 	&:hover {
 		background-color: darken($color-primary, 10%);
+		color: $color-lighter;
 	}
 }
 
@@ -776,6 +778,7 @@ textarea {
 		transform: scale(1.0) translate(0, 0);
 		background-color: white;
 		padding: 0rem .5rem;
+		-webkit-transform: 300ms transform;
 		transition: 300ms transform;
 	}
 

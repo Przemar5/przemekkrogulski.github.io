@@ -95,11 +95,11 @@ textarea:focus {
 .btn {
   border-radius: 10rem;
   padding: 1.5rem 2.75rem;
-  color: #fafafa;
   border: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-family: inherit;
+  font-size: 1.8rem;
   font-wieght: 700;
   cursor: pointer;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.4);
@@ -110,9 +110,11 @@ textarea:focus {
 
 .btn-primary {
   background-color: #1000c8;
+  color: #fafafa;
 }
 .btn-primary:focus, .btn-primary:hover {
   background-color: #0c0095;
+  color: #fafafa;
 }
 
 .wrapper {
@@ -589,6 +591,7 @@ textarea:focus {
   transform: scale(1) translate(0, 0);
   background-color: white;
   padding: 0rem 0.5rem;
+  -webkit-transform: 300ms transform;
   transition: 300ms transform;
 }
 .contact__form-submit {

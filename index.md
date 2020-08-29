@@ -179,7 +179,7 @@ Forum made with Symfony 5
 
 <div class="socials">[](https://github.com/Przemar5)[](https://www.linkedin.com/in/przemys%C5%82aw-krogulski-1081ba1b2/)[](https://www.facebook.com/przemo.dzida)</div>
 
-<div class="footer__footprint">Przemysław Krogulski © 2020</div>
+<div class="footer__footprint">Przemysław Krogulski © <time datetime="2020">2020</time></div>
 
 </div>
 
