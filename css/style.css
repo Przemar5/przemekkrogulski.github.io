@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap");
 *,
 *::before,
 *::after {
@@ -18,9 +19,23 @@ html {
 }
 
 body {
-  font-family: "Russo One", "Open Sans", sans-serif;
+  font-family: "Russo One", "Open Sans", "Russo One", sans-serif;
   font-size: 1.6rem;
   font-weight: 200;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Russo One";
+}
+
+input,
+textarea {
+  font-family: "Russo One";
 }
 
 input,
@@ -118,6 +133,7 @@ textarea:focus {
 .section__header {
   display: flex;
   justify-content: center;
+  font-family: "Russo One";
   font-size: 4.5rem;
   font-weight: 100;
   margin-bottom: 1rem;
@@ -339,34 +355,35 @@ textarea:focus {
 }
 .about__skill-meter {
   width: 70%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   height: 2.5rem;
+  -webkit-appearance: meter;
+  appearance: meter;
+  -moz-appearance: none;
+  border-radius: 20rem;
   background: #eee;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2) inset;
-  border-radius: 20px;
   margin-left: 2rem;
-  position: relative;
-  /* Firefox */
+  border: none;
 }
 .about__skill-meter::-webkit-meter-bar {
-  background: #eee;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.9) inset;
-  border-radius: 20rem;
+  background: none;
+  height: 2.5rem;
+  border: none;
 }
 .about__skill-meter::-webkit-meter-optimum-value {
   border-radius: 20rem;
-}
-.about__skill-meter::-webkit-meter-optimum-value {
-  background: #f0d600;
+  background-color: #f0d600;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.2) inset;
 }
 .about__skill-meter::-moz-meter-bar {
+  background: none;
+  box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.2) inset;
   border-radius: 20rem;
+  border: none;
 }
 .about__skill-meter:-moz-meter-optimum::-moz-meter-bar {
-  background: #f0d600;
+  border-radius: 20rem;
+  background-color: #f0d600;
   box-shadow: -1px -2px 3px rgba(0, 0, 0, 0.2) inset;
 }
 
@@ -533,7 +550,7 @@ textarea:focus {
 .contact__input, .contact__textarea {
   display: block;
   width: 100%;
-  font-family: inherit;
+  font-family: "Russo One";
   font-size: inherit;
   padding: 0.75rem 1.25rem;
   border-top: none;
@@ -545,7 +562,8 @@ textarea:focus {
   outline: black solid 0px;
   position: relative;
 }
-.contact__input::placeholder, .contact__textarea::placeholder {
+.contact__input::-webkit-input-placeholder, .contact__input:-ms-input-placeholder, .contact__input::placeholder, .contact__textarea::-webkit-input-placeholder, .contact__textarea:-ms-input-placeholder, .contact__textarea::placeholder {
+  font-family: "Russo One";
   font-weight: 300;
 }
 .contact__input:invalid, .contact__textarea:invalid {
