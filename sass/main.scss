@@ -3,15 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&display=swap');
 
 // Variables
 
 $navbar-height: 5rem;
 $font-size: 1.6rem;
 
+$font-primary: 'Alata';
+$font-secondary: 'Open Sans';
 $font-primary: 'Open Sans';
-$font-secondary: 'Russo One';
+$font-secondary: 'Alata';
 
 
 $box-shadow-md: 3px 3px 8px 0 rgba(0, 0, 0, .4);
@@ -54,9 +58,8 @@ html {
 }
 
 body {
-	font-family: $font-secondary, $font-primary, $font-secondary, sans-serif;
+	font-family: $font-primary, sans-serif;
 	font-size: 1.6rem;
-	font-weight: 200;
 }
 
 h1,
@@ -64,13 +67,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+label {
 	font-family: $font-secondary;
-}
-
-input,
-textarea {
-	font-family: $font-secondary;
+	font-weight: 500;
+	letter-spacing: 1px;
 }
 
 // Inputs base prefixing
@@ -84,6 +85,7 @@ textarea {
 		outline: black solid 2px;
 	}
 }
+
 
 // Utils
 
@@ -136,10 +138,10 @@ textarea {
 	padding: 1.5rem 2.75rem;
 	border: none;
 	text-transform: uppercase;
-	letter-spacing: 3px;
+	letter-spacing: 1px;
 	font-family: inherit;
 	font-size: 1.8rem;
-	font-wieght: 700;
+	font-weight: 700;
 	cursor: pointer;
 	box-shadow: $box-shadow-md;
 
@@ -180,7 +182,7 @@ textarea {
 		justify-content: center;
 		font-family: $font-secondary;
 		font-size: 4.5rem;
-		font-weight: 100;
+		font-weight: 700;
 		margin: {
 			bottom: 1rem;
 		}
@@ -493,7 +495,6 @@ textarea {
 		max-width: 100%;
 		height: auto;
 		max-height: 32rem;
-		border-radius: 50%;
 		margin: auto;
 	}
 
@@ -517,7 +518,7 @@ textarea {
 
 		&-meter {
 		    width: 70%;
-		    height: 2.5rem;
+		    height: 2.6rem;
 		    -webkit-appearance: meter;
 		    appearance: meter;
 		    -moz-appearance: none;
@@ -529,7 +530,7 @@ textarea {
 
 			&::-webkit-meter-bar {
 			    background: none;
-			    height: 2.5rem;
+			    height: 2.6rem;
 			    border: none;
 			}
 
@@ -686,7 +687,6 @@ textarea {
 
 	&__header {
 		font-size: 3rem;
-		font-weight: 300;
 		margin: {
 			top: 1rem;
 			bottom: 1rem;
@@ -768,7 +768,7 @@ textarea {
 	&__textarea {
 		display: block;
 		width: 100%;
-		font-family: $font-secondary;
+		font-family: inherit;
 		font-size: inherit;
 		padding: .75rem 1.25rem;
 		border: {
@@ -834,13 +834,11 @@ textarea {
 .footer {
 	display: block;
 	width: 100%;
-	background-color: #262626;
+	background-color: $color-light;
 	display: flex;
 	padding: 6.5rem 2rem;
 	justify-content: center;
 	align-items: center;
-	background-color: $color-secondary;
-	background: linear-gradient(10deg, $color-primary-light, $color-secondary);
 
 	.wrapper {
 		flex-direction: column;
@@ -860,7 +858,6 @@ textarea {
 		padding: 2rem;
 		margin: 0 1.25rem;
 		background-color: black;
-		color: #fafafa;
 		font-size: 3rem;
 		width: 5.5rem;
 		height: 5.5rem;
@@ -899,6 +896,5 @@ textarea {
 
 	&__footprint {
 		display: flex;
-		color: #fafafa;
 	}
 }

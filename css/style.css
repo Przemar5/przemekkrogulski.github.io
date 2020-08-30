@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Russo+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -19,9 +19,8 @@ html {
 }
 
 body {
-  font-family: "Russo One", "Open Sans", "Russo One", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
-  font-weight: 200;
 }
 
 h1,
@@ -29,13 +28,11 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Russo One";
-}
-
-input,
-textarea {
-  font-family: "Russo One";
+h6,
+label {
+  font-family: "Alata";
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 input,
@@ -97,10 +94,10 @@ textarea:focus {
   padding: 1.5rem 2.75rem;
   border: none;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-family: inherit;
   font-size: 1.8rem;
-  font-wieght: 700;
+  font-weight: 700;
   cursor: pointer;
   box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.4);
 }
@@ -135,9 +132,9 @@ textarea:focus {
 .section__header {
   display: flex;
   justify-content: center;
-  font-family: "Russo One";
+  font-family: "Alata";
   font-size: 4.5rem;
-  font-weight: 100;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 
@@ -283,7 +280,7 @@ textarea:focus {
 .navbar__toggler .line {
   position: relative;
   background-color: #fafafa;
-  opacity: 1;
+  transition: background-color 300ms ease;
   transition: opacity 300ms ease;
 }
 .navbar__toggler .line::before,
@@ -379,7 +376,6 @@ textarea:focus {
   max-width: 100%;
   height: auto;
   max-height: 32rem;
-  border-radius: 50%;
   margin: auto;
 }
 .about__skills {
@@ -400,7 +396,7 @@ textarea:focus {
 }
 .about__skill-meter {
   width: 70%;
-  height: 2.5rem;
+  height: 2.6rem;
   -webkit-appearance: meter;
   appearance: meter;
   -moz-appearance: none;
@@ -412,7 +408,7 @@ textarea:focus {
 }
 .about__skill-meter::-webkit-meter-bar {
   background: none;
-  height: 2.5rem;
+  height: 2.6rem;
   border: none;
 }
 .about__skill-meter::-webkit-meter-optimum-value {
@@ -469,8 +465,7 @@ textarea:focus {
   }
 }
 #projects {
-  background-color: #00e38e;
-  background: linear-gradient(10deg, #6fe3d7, #00e38e);
+  background-color: #eeeeee;
   transform: skewY(-6deg);
 }
 #projects > * {
@@ -535,7 +530,6 @@ textarea:focus {
 }
 .project__header {
   font-size: 3rem;
-  font-weight: 300;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -595,7 +589,7 @@ textarea:focus {
 .contact__input, .contact__textarea {
   display: block;
   width: 100%;
-  font-family: "Russo One";
+  font-family: inherit;
   font-size: inherit;
   padding: 0.75rem 1.25rem;
   border-top: none;
@@ -608,7 +602,7 @@ textarea:focus {
   position: relative;
 }
 .contact__input::-webkit-input-placeholder, .contact__input:-ms-input-placeholder, .contact__input::placeholder, .contact__textarea::-webkit-input-placeholder, .contact__textarea:-ms-input-placeholder, .contact__textarea::placeholder {
-  font-family: "Russo One";
+  font-family: "Alata";
   font-weight: 300;
 }
 .contact__input:invalid, .contact__textarea:invalid {
@@ -645,13 +639,11 @@ textarea:focus {
 .footer {
   display: block;
   width: 100%;
-  background-color: #262626;
+  background-color: #eeeeee;
   display: flex;
   padding: 6.5rem 2rem;
   justify-content: center;
   align-items: center;
-  background-color: #00e38e;
-  background: linear-gradient(10deg, #6fe3d7, #00e38e);
 }
 .footer .wrapper {
   flex-direction: column;
@@ -669,7 +661,6 @@ textarea:focus {
   padding: 2rem;
   margin: 0 1.25rem;
   background-color: black;
-  color: #fafafa;
   font-size: 3rem;
   width: 5.5rem;
   height: 5.5rem;
@@ -693,7 +684,6 @@ textarea:focus {
 }
 .footer__footprint {
   display: flex;
-  color: #fafafa;
 }
 
 /*# sourceMappingURL=style.css.map */
