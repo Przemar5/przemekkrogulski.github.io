@@ -213,6 +213,37 @@ textarea {
 	}
 }
 
+.hidden {
+	opacity: 0;
+}
+
+// Animations
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        //transform: translateY(15px);
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        //transform: translateY(0);
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+	animation-name: fade-in;
+	-moz-animation-name: fade-in; /* Firefox */
+	-webkit-animation-name: fade-in; /* Safari and Chrome */
+	-o-animation-name: fade-in; /* Opera */
+	animation-duration: 800ms;
+	animation-timing-function: ease-out;
+	animation-delay: 0;
+	animation-direction: forwards;
+	animation-iteration-count: 1;
+}
+
 // Navigation
 
 .navbar {
@@ -282,17 +313,18 @@ textarea {
 		}
 
 		&:checked ~ .navbar__toggler > .line {
-			transform-origin: center;
-			transform: rotate(45deg) translate(0, 0);
+			background-color: rgba($color-lighter, 0);
+			opacity: 0;
 		}
 		
 		&:checked ~ .navbar__toggler > .line::before {
-			opacity: 0;
+			transform-origin: top left;
+			transform: rotate(45deg) translate(-3px, 3px);
 		}
 		
 		&:checked ~ .navbar__toggler > .line::after {
 			transform-origin: bottom left;
-			transform: rotate(-45deg) translate(3px, 2px);
+			transform: rotate(-45deg) translate(3px, 3px);
 		}
 	}
 
@@ -309,8 +341,14 @@ textarea {
 
 		&:focus,
 		&:hover {
-			background-color: $color-lighter;
+			.line,
+			.line::before,
+			.line::after {
+				background-color: #151515;
+			}
+
 			color: #151515;
+			background-color: $color-lighter;
 		}
 
 		.line,
@@ -319,19 +357,23 @@ textarea {
 			display: block;
 			width: 3rem;
 			height: 2px;
-			background-color: currentColor;
-			transform: translate(0, 0) rotate(0);
-			transition: transorm 300ms ease;
 		}
 
 		.line {
 			position: relative;
+			background-color: rgba($color-lighter, 1);
+			opacity: 1;
+			//transition: background-color 300ms ease;
+			transition: opacity 300ms ease;
 		}
 
 		.line::before,
 		.line::after {
 			content: '';
+			background-color: currentColor;
 			position: absolute;
+			transform: translate(0, 0) rotate(0);
+			transition: transorm 300ms ease;
 		}
 
 		.line::before {
@@ -440,7 +482,7 @@ textarea {
 		margin: 1.5rem 0;
 
 		&-header {
-
+			margin-bottom: .5rem;
 		}
 
 		&-paragraph {

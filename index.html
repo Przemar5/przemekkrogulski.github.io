@@ -14,49 +14,51 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
+		<script src="js/main.js" defer></script>
+		<script src="js/animation.js" defer></script>
+		<script src="js/navigation.js" defer></script>
+
 		<!-- Links -->
 		<link href="favicon.ico" rel="apple-touch-icon">
 		<link href="favicon.ico" rel="icon">
 
 		<!-- Custom styles -->
 		<link rel="stylesheet" href="css/style.css">
-
-		<script src="js/main.js" defer></script>
 	</head>
 	<body>
 		<!-- Navigation -->
-		<nav class="navbar bg-primary text-light">
+		<nav class="navbar bg-primary text-light" aria-labelledby="navbar__brand">
 			<div class="navbar__wrapper">
 				<a class="navbar__brand" href="#home">
 					Przemysław Krogulski
 				</a>
 
-				<input type="checkbox" id="toggler"/>
+				<input type="checkbox" id="toggler" aria-expanded="false" aria-controls="menuList" aria-label="Toggle navigation"/>
 				<label for="toggler" class="navbar__toggler">
 					<span class="line"></span>
 				</label>
 
-				<ul class="navbar__list" type="none">
-					<li class="navbar__item">
-						<a class="navbar__link" href="#home">
+				<ul role="menu" id="menuList" class="navbar__list" type="none">
+					<li role="presentation" class="navbar__item">
+						<a role="menuitem" class="navbar__link" href="#home">
 							Home
 						</a>
 					</li>
 
-					<li class="navbar__item">
-						<a class="navbar__link" href="#about">
+					<li role="presentation" class="navbar__item">
+						<a role="menuitem" class="navbar__link" href="#about">
 							About me
 						</a>
 					</li>
 
-					<li class="navbar__item">
-						<a class="navbar__link" href="#projects">
+					<li role="presentation" class="navbar__item">
+						<a role="menuitem" class="navbar__link" href="#projects">
 							Projects
 						</a>
 					</li>
 
-					<li class="navbar__item">
-						<a class="navbar__link" href="#contact">
+					<li role="presentation" class="navbar__item">
+						<a role="menuitem" class="navbar__link" href="#contact">
 							Contact
 						</a>
 					</li>
@@ -73,15 +75,15 @@
 			<!-- About section -->
 			<section class="section" id="about">
 				<div class="wrapper">
-					<h2 class="section__header">
+					<h2 class="section__header animation--fade-in">
 						About me
 					</h2>
 
 					<div class="about__content">
 						<div class="about__left">
-							<img src="images/me.jpg" class="about__photo"/>
+							<img src="images/me.jpg" class="about__photo animation--fade-in"/>
 
-							<article class="about__article">
+							<article class="about__article animation--fade-in">
 								<h3 class="about__article-header">
 									Who am I?
 								</h3>
@@ -94,7 +96,7 @@
 
 						<div class="about__right">
 
-							<article class="about__article">
+							<article class="about__article animation--fade-in">
 								<h3 class="about__article-header">
 									What I do?
 								</h3>
@@ -104,53 +106,53 @@
 								</p>
 							</article>
 							
-							<article class="about__article">
+							<article class="about__article animation--fade-in">
 								<h3 class="about__article-header">
 									Technology stack
 								</h3>
 
 								<div class="about__skills">
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">PHP</p>
 										<meter min="0" max="100" value="90" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">MySQL</p>
 										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">PostgreSQL</p>
 										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">jQuery</p>
 										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">Javascript</p>
 										<meter min="0" max="100" value="65" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">HTML</p>
 										<meter min="0" max="100" value="70" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">CSS</p>
 										<meter min="0" max="100" value="80" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">Laravel</p>
 										<meter min="0" max="100" value="65" class="about__skill-meter"></meter>
 									</div>
 
-									<div class="about__skill">
+									<div class="about__skill animation--fade-in">
 										<p class="about__skill-name">Symfony</p>
 										<meter min="0" max="100" value="55" class="about__skill-meter"></meter>
 									</div>
@@ -164,12 +166,12 @@
 			<!-- Projects -->
 			<section class="section" id="projects">
 				<div class="wrapper">
-					<h2 class="section__header">
+					<h2 class="section__header animation--fade-in">
 						Projects
 					</h2>
 
 					<div class="projects__container">
-						<figure class="project">
+						<figure class="project animation--fade-in">
 							<a class="project__link" target="_blank" href="http://yourfreshnews.herokuapp.com">
 								<img class="project__image project__image--freshnews" src="images/project_1.png"/>
 								<figcaption class="project__caption">
@@ -179,7 +181,7 @@
 							</a>
 						</figure>
 
-						<figure class="project">
+						<figure class="project animation--fade-in">
 							<a class="project__link" target="_blank" href="https://programming-forum.herokuapp.com">
 								<img class="project__image project__image--programming-forum" src="images/programming-forum.png"/>
 								<figcaption class="project__caption">
@@ -291,27 +293,27 @@
 			<!-- Contact -->
 			<section class="section" id="contact">
 				<div class="wrapper">
-					<h2 class="section__header">
+					<h2 class="section__header animation--fade-in">
 						Contact
 					</h2>
 
 					<form class="contact__form" method="post">
-						<label class="contact__form-control contact__form-control--name">
+						<label class="contact__form-control contact__form-control--nam animation--fade-in">
 							<input type="text" class="contact__input" name="name" placeholder/>
 							<span class="contact__input-placeholder">Name</span>
 						</label>
 
-						<label class="contact__form-control contact__form-control--email">
+						<label class="contact__form-control contact__form-control--email animation--fade-in">
 							<input type="email" class="contact__input" name="email" placeholder/>
 							<span class="contact__input-placeholder">Email</span>
 						</label>
 
-						<label class="contact__form-control contact__form-control--message">
+						<label class="contact__form-control contact__form-control--message animation--fade-in">
 							<textarea class="contact__textarea" name="message" rows="5" placeholder></textarea>
 							<span class="contact__input-placeholder">Message</span>
 						</label>
 
-						<button class="btn btn-primary contact__form-submit">
+						<button class="btn btn-primary contact__form-submit animation--fade-in">
 							Send <span class="fas fa-paper-plane"></span>
 						</button>
 					</form>

@@ -156,6 +156,35 @@ textarea:focus {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.hidden {
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.fade-in {
+  animation-name: fade-in;
+  -moz-animation-name: fade-in;
+  /* Firefox */
+  -webkit-animation-name: fade-in;
+  /* Safari and Chrome */
+  -o-animation-name: fade-in;
+  /* Opera */
+  animation-duration: 800ms;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: forwards;
+  animation-iteration-count: 1;
+}
+
 .navbar {
   display: flex;
   flex-direction: row;
@@ -213,15 +242,16 @@ textarea:focus {
   color: #151515;
 }
 .navbar #toggler:checked ~ .navbar__toggler > .line {
-  transform-origin: center;
-  transform: rotate(45deg) translate(0, 0);
+  background-color: rgba(250, 250, 250, 0);
+  opacity: 0;
 }
 .navbar #toggler:checked ~ .navbar__toggler > .line::before {
-  opacity: 0;
+  transform-origin: top left;
+  transform: rotate(45deg) translate(-3px, 3px);
 }
 .navbar #toggler:checked ~ .navbar__toggler > .line::after {
   transform-origin: bottom left;
-  transform: rotate(-45deg) translate(3px, 2px);
+  transform: rotate(-45deg) translate(3px, 3px);
 }
 .navbar__toggler {
   display: none;
@@ -233,8 +263,15 @@ textarea:focus {
   padding-right: 1.5rem;
 }
 .navbar__toggler:focus, .navbar__toggler:hover {
-  background-color: #fafafa;
   color: #151515;
+  background-color: #fafafa;
+}
+.navbar__toggler:focus .line,
+.navbar__toggler:focus .line::before,
+.navbar__toggler:focus .line::after, .navbar__toggler:hover .line,
+.navbar__toggler:hover .line::before,
+.navbar__toggler:hover .line::after {
+  background-color: #151515;
 }
 .navbar__toggler .line,
 .navbar__toggler .line::before,
@@ -242,17 +279,20 @@ textarea:focus {
   display: block;
   width: 3rem;
   height: 2px;
-  background-color: currentColor;
-  transform: translate(0, 0) rotate(0);
-  transition: transorm 300ms ease;
 }
 .navbar__toggler .line {
   position: relative;
+  background-color: #fafafa;
+  opacity: 1;
+  transition: opacity 300ms ease;
 }
 .navbar__toggler .line::before,
 .navbar__toggler .line::after {
   content: "";
+  background-color: currentColor;
   position: absolute;
+  transform: translate(0, 0) rotate(0);
+  transition: transorm 300ms ease;
 }
 .navbar__toggler .line::before {
   top: -1rem;
@@ -331,6 +371,9 @@ textarea:focus {
 .about__article {
   padding: 0.5rem 0.75rem;
   margin: 1.5rem 0;
+}
+.about__article-header {
+  margin-bottom: 0.5rem;
 }
 .about__photo {
   max-width: 100%;
