@@ -22,7 +22,7 @@ $box-shadow-lg: 3px 3px 11px 0 rgba(0, 0, 0, .4);
 $color-gold: #f0d600;
 
 $color-lighter: #fafafa;
-$color-light: #f6f6f6;
+$color-light: #eeeeee;
 $color-grey: #777;
 
 $color-primary: #1000c8;
@@ -362,8 +362,7 @@ textarea {
 		.line {
 			position: relative;
 			background-color: rgba($color-lighter, 1);
-			opacity: 1;
-			//transition: background-color 300ms ease;
+			transition: background-color 300ms ease;
 			transition: opacity 300ms ease;
 		}
 
@@ -610,8 +609,8 @@ textarea {
 // Projects
 
 #projects {
-	background-color: $color-secondary;
-	background: linear-gradient(10deg, $color-primary-light, $color-secondary);
+	background-color: $color-light;
+	//background: linear-gradient(10deg, $color-primary-light, $color-secondary);
 	transform: skewY(-6deg);
 
 	& > * {
