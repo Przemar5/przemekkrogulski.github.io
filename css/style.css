@@ -356,13 +356,13 @@ textarea:focus {
   text-align: center;
 }
 
-.home__card-heading {
+.home__card h1 {
   font-size: 4.5rem;
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
 
-.home__card-caption {
+.home__card h3 {
   font-size: 2.5rem;
 }
 
