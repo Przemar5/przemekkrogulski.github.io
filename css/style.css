@@ -346,17 +346,24 @@ textarea:focus {
   background: url('../images/hero-lg.jpg') no-repeat center center/cover;
 }
 
-.header__card {
+.home__card {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   background-color: #fafafa;
   max-width: 90vw;
+  text-align: center;
 }
 
-.header__card h3 {
-  margin-top: 1rem;
+.home__card-heading {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.home__card-caption {
+  font-size: 2.5rem;
 }
 
 #about {

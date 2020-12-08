@@ -15,7 +15,7 @@
 
 <div id="hero">
 
-<div class="card header__card">
+<div class="card home__card">
 
 # Przemysław Krogulski
 
