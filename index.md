@@ -13,7 +13,17 @@
 
 <header id="home">
 
-<canvas id="canvas"></canvas>
+<div id="hero">
+
+<div class="card header__card">
+
+# Przemysław Krogulski
+
+### Full Stack Developer
+
+</div>
+
+</div>
 
 </header>
 
@@ -27,7 +37,7 @@
 
 <div class="about__content">
 
-<div class="about__left">![](images/me.jpg)
+<div class="about__left">![Me](images/me.jpg)
 
 <article class="about__article animation--fade-in">
 
@@ -53,63 +63,23 @@ I program websites in PHP and Javascript. I have some experience with Laravel an
 
 ### Technology stack
 
-<div class="about__skills">
+*   PHP
 
-<div class="about__skill animation--fade-in">
+*   MySQL
 
-PHP
+*   PostgreSQL
 
-</div>
+*   jQuery
 
-<div class="about__skill animation--fade-in">
+*   Javascript
 
-MySQL
+*   HTML
 
-</div>
+*   CSS
 
-<div class="about__skill animation--fade-in">
+*   Laravel
 
-PostgreSQL
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-jQuery
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-Javascript
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-HTML
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-CSS
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-Laravel
-
-</div>
-
-<div class="about__skill animation--fade-in">
-
-Symfony
-
-</div>
-
-</div>
+*   Symfony
 
 </article>
 
@@ -135,7 +105,7 @@ Symfony
 
 ### Fresh News
 
-News site made with Laravel 7
+News site made with Laravel 7, jQuery and SASS
 
 </figcaption>
 
@@ -147,11 +117,23 @@ News site made with Laravel 7
 
 ### Programming forum
 
-Forum made with Symfony 5
+Forum made with Symfony 5, jQuery and SASS
 
 </figcaption>
 
 ](https://programming-forum.herokuapp.com)</figure>
+
+<figure class="project animation--fade-in">[![](images/ksiegarnia-mewa.png)
+
+<figcaption class="project__caption">
+
+### Księgarnia Mewa
+
+E-commerce made with Symfony 5, Javascript and SASS
+
+</figcaption>
+
+](https://ksiegarnia-mewa.herokuapp.com)</figure>
 
 </div>
 
@@ -177,7 +159,7 @@ Forum made with Symfony 5
 
 <div class="wrapper">
 
-<div class="socials">[](https://github.com/Przemar5)[](https://www.linkedin.com/in/przemys%C5%82aw-krogulski-1081ba1b2/)[](https://www.facebook.com/przemo.dzida)</div>
+<div class="socials">[<span class="fab fa-github"></span>](https://github.com/Przemar5)[<span class="fab fa-linkedin-in"></span>](https://www.linkedin.com/in/przemys%C5%82aw-krogulski-1081ba1b2/)[<span class="fab fa-facebook-f"></span>](https://www.facebook.com/przemo.dzida)</div>
 
 <div class="footer__footprint">Przemysław Krogulski © <time datetime="2020">2020</time></div>
 
