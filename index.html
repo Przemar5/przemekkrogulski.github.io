@@ -15,9 +15,9 @@
 		<!-- jQuery -->
 		<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 
-		<script src="js/main.js" defer></script>
 		<script src="js/animation.js" defer></script>
 		<script src="js/navigation.js" defer></script>
+		<script src="js/sendMail.js" defer></script>
 
 		<!-- Links -->
 		<link href="favicon.ico" rel="apple-touch-icon">
@@ -95,7 +95,7 @@
 								</h3>
 
 								<p class="about__article-paragraph">
-									Programming is my passion. I am selfthaught programmer from 2 years. From 1 and half year also selfthaught full stack developer. I am interested in programming, web security, self-development, economics, politics and design.
+									I am selfthaught programmer from about 3 years. From 2 years also selfthaught full stack developer. I've been also interested in web security and design.
 								</p>
 							</article>
 						</div>
@@ -108,7 +108,7 @@
 								</h3>
 
 								<p class="about__article-paragraph">
-									I program websites in PHP and Javascript. I have some experience with Laravel and little experience Symfony.
+									I program websites in PHP and Javascript. I have some experience with Laravel, little experience Symfony and Wordpress.
 								</p>
 							</article>
 							
@@ -161,6 +161,11 @@
 									<li class="about__skill animation--fade-in">
 										<p class="about__skill-name">Symfony</p>
 										<meter min="0" max="100" value="65" class="about__skill-meter"></meter>
+									</li>
+
+									<li class="about__skill animation--fade-in">
+										<p class="about__skill-name">Wordpress</p>
+										<meter min="0" max="100" value="40" class="about__skill-meter"></meter>
 									</li>
 								</ul>
 							</article>
@@ -219,13 +224,8 @@
 
 					<form class="contact__form" method="post">
 						<label class="contact__form-control contact__form-control--nam animation--fade-in">
-							<input type="text" class="contact__input" name="name" placeholder/>
-							<span class="contact__input-placeholder">Name</span>
-						</label>
-
-						<label class="contact__form-control contact__form-control--email animation--fade-in">
-							<input type="email" class="contact__input" name="email" placeholder/>
-							<span class="contact__input-placeholder">Email</span>
+							<input type="text" class="contact__input" name="subject" placeholder/>
+							<span class="contact__input-placeholder">Subject</span>
 						</label>
 
 						<label class="contact__form-control contact__form-control--message animation--fade-in">
@@ -233,7 +233,7 @@
 							<span class="contact__input-placeholder">Message</span>
 						</label>
 
-						<button class="btn btn-primary contact__form-submit animation--fade-in">
+						<button type="submit" class="btn btn-primary contact__form-submit animation--fade-in">
 							Send <span class="fas fa-paper-plane"></span>
 						</button>
 					</form>

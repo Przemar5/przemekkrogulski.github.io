@@ -5,6 +5,7 @@ const options = {
 	threshold: 0,
 	rootMargin: '50px',
 }
+
 const fadeIn = function (entry) {
 	entry.classList.remove('hidden')
 	entry.classList.add('fade-in')
@@ -17,7 +18,8 @@ let observer = new IntersectionObserver(function (entries, observer) {
 		let delay = 150
 		
 		for (let i in fadeIns) {
-			setTimeout(fadeIn, i*delay, fadeIns[i])
+			item = fadeIns.item(i)
+			setTimeout(fadeIn, i*delay, item)
 		}
 		observer.unobserve(entry.target)
 	})
